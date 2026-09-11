@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CleanNest | Fresh Clothes, At Your Door</title>
+<meta name="description" content="CleanNest provides convenient home pickup and delivery for laundry and dry cleaning in Kamla Nagar, Delhi.">
+<style>
+:root{--green:#168b57;--dark:#123047;--soft:#eef8f3;--text:#243746;--muted:#687783;--white:#fff;--border:#e5ece9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.55;background:#fff}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:27px;font-weight:800;color:var(--dark)} .logo span{color:var(--green)}
+.tag{font-size:12px;color:var(--muted);display:block;margin-top:-4px}
+nav{display:flex;gap:25px;font-size:14px;font-weight:600;color:#425461}
+nav a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:30px;padding:13px 22px;font-weight:700;cursor:pointer}
+.btn-green{background:var(--green);color:white}.btn-light{background:#eaf7f0;color:var(--green)}
+.hero{padding:75px 0 65px;background:linear-gradient(135deg,#f5fbf8,#fff)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.badge{display:inline-block;background:#dff3e8;color:var(--green);font-weight:700;border-radius:20px;padding:7px 13px;font-size:13px}
+h1{font-size:58px;line-height:1.05;color:var(--dark);margin:18px 0}
+h1 span{color:var(--green)} .lead{font-size:18px;color:var(--muted);max-width:580px}
+.actions{display:flex;gap:12px;margin:28px 0 22px;flex-wrap:wrap}
+.contact{font-weight:700;color:var(--dark)}
+.hero-card{background:#fff;border-radius:28px;padding:18px;box-shadow:0 18px 50px rgba(18,48,71,.12)}
+.hero-photo{height:390px;border-radius:20px;background:
+linear-gradient(120deg,rgba(22,139,87,.08),rgba(18,48,71,.04)),
+url("https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=85") center/cover}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.stat{background:var(--soft);border-radius:14px;padding:12px;text-align:center;font-size:12px;font-weight:700}
+.stat strong{display:block;font-size:19px;color:var(--green)}
+section{padding:70px 0}.section-head{text-align:center;margin-bottom:35px}
+.section-head h2{font-size:36px;color:var(--dark)} .section-head p{color:var(--muted);margin-top:7px}
+.services{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.service{border:1px solid var(--border);border-radius:18px;padding:22px 14px;text-align:center;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.035)}
+.icon{font-size:31px;margin-bottom:10px}.service h3{font-size:17px;color:var(--dark)}.price{font-size:21px;font-weight:800;color:var(--green);margin-top:7px}
+.note{text-align:center;color:var(--muted);font-size:13px;margin-top:18px}
+.steps{background:var(--soft)} .step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{text-align:center}.num{width:50px;height:50px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;margin:0 auto 14px;font-size:20px;font-weight:800}
+.step h3{color:var(--dark);margin-bottom:5px}.step p{color:var(--muted);font-size:14px}
+.pricing{background:#fbfcfc}.price-table{max-width:850px;margin:auto;border:1px solid var(--border);border-radius:18px;overflow:hidden}
+.row{display:grid;grid-template-columns:1fr 180px;padding:15px 20px;border-bottom:1px solid var(--border);background:#fff}.row:last-child{border-bottom:0}.row.head{background:var(--dark);color:#fff;font-weight:700}.amount{text-align:right;font-weight:800;color:var(--green)}.head .amount{color:#fff}
+.banner{background:var(--dark);color:#fff;border-radius:25px;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:25px}.banner h2{font-size:32px}.banner p{color:#d4e1e8;margin-top:6px}
+.area{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:stretch}.box{border:1px solid var(--border);border-radius:20px;padding:28px}.box h3{color:var(--dark);font-size:23px;margin-bottom:10px}.box p{color:var(--muted)}
+footer{background:#0d2637;color:#d7e4ea;padding:35px 0}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.foot .logo{color:#fff}.foot small{color:#9fb1bc}
+@media(max-width:900px){nav{display:none}.hero-grid,.area{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.step-grid{grid-template-columns:repeat(2,1fr)}h1{font-size:46px}.hero-photo{height:300px}}
+@media(max-width:520px){.services{grid-template-columns:1fr 1fr}.services .service{padding:17px 8px}.row{grid-template-columns:1fr 120px}.banner{padding:28px;display:block}.banner .btn{margin-top:18px}.foot{display:block}.foot small{display:block;margin-top:10px}section{padding:55px 0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div><div class="logo">Clean<span>Nest</span></div><span class="tag">Fresh Clothes, At Your Door</span></div>
+    <nav><a href="#services">Services</a><a href="#prices">Price List</a><a href="#how">How It Works</a><a href="#contact">Contact</a></nav>
+    <a class="btn btn-green" href="https://wa.me/918448531050?text=Hi%20CleanNest%2C%20I%20want%20to%20book%20a%20pickup.">WhatsApp Order</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<span class="badge">Home Pickup & Delivery • Kamla Nagar</span>
+<h1>Clean Clothes.<br><span>Happier You.</span></h1>
+<p class="lead">Professional laundry & dry-cleaning made easy. We pick up your clothes from your doorstep, get them cleaned with care, and deliver them back fresh.</p>
+<div class="actions">
+<a class="btn btn-green" href="https://wa.me/918448531050?text=Hi%20CleanNest%2C%20I%20want%20to%20book%20a%20pickup.">Order on WhatsApp</a>
+<a class="btn btn-light" href="#prices">View Prices</a>
+</div>
+<div class="contact">📞 8448531050 &nbsp; • &nbsp; Yash</div>
+</div>
+<div class="hero-card">
+<div class="hero-photo"></div>
+<div class="stats">
+<div class="stat"><strong>Doorstep</strong>Pickup</div>
+<div class="stat"><strong>Careful</strong>Cleaning</div>
+<div class="stat"><strong>Fresh</strong>Delivery</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-head"><h2>Our Services</h2><p>Transparent pricing for everyday clothes and special outfits.</p></div>
+<div class="services">
+<div class="service"><div class="icon">👕</div><h3>Shirt</h3><div class="price">₹119</div></div>
+<div class="service"><div class="icon">👖</div><h3>Pant</h3><div class="price">₹99</div></div>
+<div class="service"><div class="icon">🧥</div><h3>Coat / Pant</h3><div class="price">₹249</div></div>
+<div class="service"><div class="icon">🧶</div><h3>Sweater</h3><div class="price">₹150+</div><small>After check</small></div>
+<div class="service"><div class="icon">🥻</div><h3>Blanket / Quilt</h3><div class="price">₹279</div></div>
+</div>
+<div class="service"><div class="icon">🧥</div><h3>Jacket</h3><div class="price">₹189</div></div>
+<div class="service"><div class="icon">👗</div><h3>Dress</h3><div class="price">₹199+</div><small>After check</small></div>
+<div class="service"><div class="icon">👟</div><h3>Shoes</h3><div class="price">₹299</div></div>
+</div>
+<p class="note">*Final price may vary for special fabrics, heavy stains, size or condition. Dress pricing is confirmed after inspection.</p>
+</div>
+</section>
+
+<section id="how" class="steps">
+<div class="container">
+<div class="section-head"><h2>How It Works</h2><p>Just 4 simple steps.</p></div>
+<div class="step-grid">
+<div class="step"><div class="num">1</div><h3>Book</h3><p>WhatsApp us with the clothes you want cleaned.</p></div>
+<div class="step"><div class="num">2</div><h3>Pickup</h3><p>We collect your clothes from your doorstep.</p></div>
+<div class="step"><div class="num">3</div><h3>Cleaning</h3><p>Your clothes are cleaned by our cleaning partner.</p></div>
+<div class="step"><div class="num">4</div><h3>Delivery</h3><p>Fresh, clean clothes come back to your doorstep.</p></div>
+</div>
+</div>
+</section>
+
+<section id="prices" class="pricing">
+<div class="container">
+<div class="section-head"><h2>Price List</h2><p>Clear pricing with convenient doorstep pickup & delivery.</p></div>
+<div class="price-table">
+<div class="row head"><div>Item</div><div class="amount">Customer Price</div></div>
+<div class="row"><div>Shirt</div><div class="amount">₹119</div></div>
+<div class="row"><div>Pant</div><div class="amount">₹99</div></div>
+<div class="row"><div>Coat / Pant</div><div class="amount">₹249</div></div>
+<div class="row"><div>Sweater</div><div class="amount">₹150+</div></div>
+<div class="row"><div>Blanket / Quilt</div><div class="amount">₹279</div></div>
+<div class="row"><div>Jacket</div><div class="amount">₹189</div></div>
+<div class="row"><div>Dress</div><div class="amount">₹199+</div></div>
+<div class="row"><div>Shoes</div><div class="amount">₹299</div></div>
+</div>
+<p class="note"><strong>Prices shown are customer rates.</strong> Final price for items marked “+” is confirmed after inspection.</p>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="banner">
+<div><h2>Ready to get your clothes cleaned?</h2><p>Book a doorstep pickup on WhatsApp in just a few messages.</p></div>
+<a class="btn btn-green" href="https://wa.me/918448531050?text=Hi%20CleanNest%2C%20I%20want%20to%20book%20a%20pickup.">Book Pickup</a>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container area">
+<div class="box"><h3>📍 Service Area</h3><p><strong>Kamla Nagar, Delhi – 110007</strong></p><p>Currently serving Kamla Nagar and nearby areas. More areas can be added as we grow.</p></div>
+<div class="box"><h3>📞 Get in Touch</h3><p><strong>Yash</strong></p><p>8448531050</p><br><a class="btn btn-green" href="https://wa.me/918448531050?text=Hi%20CleanNest%2C%20I%20want%20to%20book%20a%20pickup.">Chat on WhatsApp</a></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container foot">
+<div><div class="logo">Clean<span>Nest</span></div><small>Fresh Clothes, At Your Door</small></div>
+<small>© 2026 CleanNest. All rights reserved.</small>
+</div>
+</footer>
+</body>
+</html>
